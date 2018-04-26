@@ -12,7 +12,7 @@ def build_collaborative_filtering_model(file_location):
 	context = SparkContext(appName="collaborative_filtering_model")
 	data = context.textFile(file_location)
 	instances = data.map(lambda instance: instance.split(","))
-	ratings = instances.map(lambda arr: Rating(int(l[0], int(l[1]), float(l[2]))))
+	ratings = instances.map(lambda arr: Rating(int(arr[0]), int(arr[1]), float(arr[2])))
 
 	# Build model
 	rank = 10
