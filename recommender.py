@@ -25,5 +25,5 @@ def build_collaborative_filtering_model(file_location):
 	print("Mean Squared Error: " + str(MSE))
 
 if __name__ == "__main__":
-	data_file_location = "file_location.csv"
+	data_file_location = "example.csv"
 	build_collaborative_filtering_model(data_file_location)
