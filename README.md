@@ -2,4 +2,4 @@
 
 Goals:
 
-*Use Apache Spark to anaylze a large dataset.
+* Use Apache Spark to anaylze a large dataset.
