@@ -19,6 +19,7 @@ def build_collaborative_filtering_model(ratings, numIterations = 10, regularizat
 def run_collaborative_filtering_with_variable_hyperparameters(file_location):
 	# Format data
 	context = SparkContext(appName="collaborative_filtering_model")
+	context.setLogLevel("ERROR")
 	data = context.textFile(file_location)
 	instances = data.map(lambda instance: instance.split(","))
 	ratings = instances.map(lambda arr: Rating(int(arr[0]), int(arr[1]), float(arr[2])))
