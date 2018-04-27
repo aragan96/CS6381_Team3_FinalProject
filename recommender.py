@@ -4,7 +4,7 @@ import time
 
 # Code draws heavily from example code at https://github.com/apache/spark/blob/master/examples/src/main/python/mllib/recommendation_example.py
 
-def build_collaborative_filtering_model(ratings, file_location, numIterations = 10, regularization_parameter = 0.1):
+def build_collaborative_filtering_model(ratings, numIterations = 10, regularization_parameter = 0.1):
 	# file_location: Location of a file containing dataset formatted as 
 	#				 User ID, User Item, rating
 
@@ -28,7 +28,7 @@ def run_collaborative_filtering_with_variable_hyperparameters(file_location):
 	for iterations in iterations_to_test:
 		for regularization_parameter in regularization_parameters_to_test:
 			start = time.time()
-			MSE = build_collaborative_filtering_model(file_location, iterations, regularization_parameter)
+			MSE = build_collaborative_filtering_model(ratings, iterations, regularization_parameter)
 			end = time.time()
 			dif = end-start
 			print("Iterations: " + str(iterations) + " Regularization parameter: " + str(regularization_parameter) + " MSE: " + str(MSE))
