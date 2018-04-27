@@ -1,6 +1,6 @@
 from pyspark import SparkContext
-
 from pyspark.mllib.recommendation import ALS, Rating
+import time
 
 # Code draws heavily from example code at https://github.com/apache/spark/blob/master/examples/src/main/python/mllib/recommendation_example.py
 
@@ -27,9 +27,12 @@ def run_collaborative_filtering_with_variable_hyperparameters(file_location):
 	regularization_parameters_to_test = [0.01, 0.1, 1, 10]
 	for iterations in iterations_to_test:
 		for regularization_parameter in regularization_parameters_to_test:
+			start = time.time()
 			MSE = build_collaborative_filtering_model(file_location, iterations, regularization_parameter)
+			end = time.time()
+			dif = end-start
 			print("Iterations: " + str(iterations) + " Regularization parameter: " + str(regularization_parameter) + " MSE: " + str(MSE))
-
+			print("Took " + str(dif) + " seconds")
 
 if __name__ == "__main__":
 	data_file_location = "example.csv"
