@@ -24,7 +24,7 @@ def run_collaborative_filtering_with_variable_hyperparameters(file_location):
 	ratings = instances.map(lambda arr: Rating(int(arr[0]), int(arr[1]), float(arr[2])))
 
 	iterations_to_test = [1, 5, 10, 20, 50]
-	regularization_parameters_to_test = [0.01, 0.1, 1, 10]
+	regularization_parameters_to_test = [0.01, 0.1, 1.0, 10.0]
 	for iterations in iterations_to_test:
 		for regularization_parameter in regularization_parameters_to_test:
 			start = time.time()
