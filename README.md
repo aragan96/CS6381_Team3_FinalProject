@@ -21,4 +21,14 @@ We will be using Apache Spark, a leading distributed computing framework, to ana
 ### Figure 3 ###
 ![alt text](https://raw.githubusercontent.com/aragan96/CS6381_Team3_FinalProject/master/Figures/Figure3.png)
 
-## Conclusions ##
+## Analysis ##
+Figure 1 maps the number of iterations used for training against the MSE, or mean squared error of the results. For the most part, Figure 1 shows that the more training data used, the lower the error. The exception is when the regularization parameter is high; this means that in an attempt to avoid overfitting data, we reduce the accuracy of the predictions. Overall, we see that, as would be expected, more time training yields higher accuracy, though there are noticable diminishing returns between even 5 and 10 iterations.
+
+Figure 2 maps the regularization parameter against the MSE. Somewhat surprisingly, in all cases, an increase in the regularization parameter yields higher error. The regularization parameter is used to avoid overfitting the data. A higher regularization parameter means a less complex model used for prediction, to avoid being too specific to this exact dataset. However, in our case, in all cases, a lower regularization parameter (and therefore a more complex model) led to more accurate predictions.
+
+Figure 3 maps the number of cores used to run the job against the time it took to complete the job. While of course this led to a general speedup, this speedup was much less linear than expected. The time reduction from 2 all the way to 12 cores was rather gradual, and surprisingly increased in some cases. The real reduction was not obvious until 16 cores were used. Typically you see linear returns or even diminishing returns.
+
+## Conclusion ##
+
+Overall, results were somewhat unexpected.
+
