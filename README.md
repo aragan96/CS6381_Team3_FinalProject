@@ -30,5 +30,4 @@ Figure 3 maps the number of cores used to run the job against the time it took t
 
 ## Conclusion ##
 
-Overall, results were somewhat unexpected.
-
+We successfully ran predictive data analysis on the Netflix dataset using Apache Spark on Vanderbilt University's ACCRE cluster. Overall, results were somewhat unexpected. We expected overfitting to become an issue, but instead, we saw no penalties in accuracy for having overly complex models. We did, however, see diminishing returns in the complexity (lower regularization parameter) vs. the accuracy. We also expected a more linear or less than linear speedup with the number of cores; however, the data seems to suggest the biggest improvement was between 12 and 16 cores. This could be due to how Apache Spark divided our data, or due to properties of the ACCRE cluster. Training amount and accuracy did correlate as expected; more training led to higher accuracy. Regardless of our expectations, our goals were met.
