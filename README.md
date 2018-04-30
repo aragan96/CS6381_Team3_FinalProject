@@ -12,7 +12,13 @@ We will be using Apache Spark, a leading distributed computing framework, to ana
 
 ## Results ##
 
-### Figure 1: Iterations vs. Means-Squared Error ###
-![alt text](https://raw.githubusercontent.com/aragan96/CS6381_Team3_FinalProject/master/Figures/figure_10.png)
+### Figure 1 ###
+![alt text](https://raw.githubusercontent.com/aragan96/CS6381_Team3_FinalProject/master/Figures/Figure1.png)
+
+### Figure 2 ###
+![alt text](https://raw.githubusercontent.com/aragan96/CS6381_Team3_FinalProject/master/Figures/Figure2.png)
+
+### Figure 3 ###
+![alt text](https://raw.githubusercontent.com/aragan96/CS6381_Team3_FinalProject/master/Figures/Figure3.png)
 
 ## Conclusions ##
